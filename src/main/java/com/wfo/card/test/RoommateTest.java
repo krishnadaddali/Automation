@@ -3,7 +3,7 @@ package com.wfo.card.test;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import com.wfo.card.helpermethods.RoommateComparator;
+import com.wfo.card.helpermethods.RoommateComparatorByName;
 import com.wfo.card.pojo.Roommate;
 
 public class RoommateTest {
@@ -34,7 +34,7 @@ public class RoommateTest {
 
 		System.out.println("Before after sorting the names :");
 
-		Collections.sort(al, new RoommateComparator());
+		Collections.sort(al, new RoommateComparatorByName());
 
 		for (Roommate rommate : al) {
 			System.out.println(rommate);

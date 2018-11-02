@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.wfo.card.helpermethods.RoommateComparator;
+import com.wfo.card.helpermethods.RommateComparatorById;
+import com.wfo.card.helpermethods.RoommateComparatorByName;
 import com.wfo.card.pojo.Roommate;
 
 public class RoommateTest2 {
@@ -16,11 +17,33 @@ public class RoommateTest2 {
 
 		System.out.println("Before sorting names: " + roomMatesList);
 
-		System.out.println("Before after sorting the names :");
+		System.out.println("**********Sorting By Names ******* ");
 
-		Collections.sort(roomMatesList, new RoommateComparator());
+		Collections.sort(roomMatesList, new RoommateComparatorByName());
 
-		printRummetInfo(roomMatesList);
+		for (Roommate rommate : roomMatesList) {
+
+			System.out.println(rommate);
+
+		}
+
+		// System.out.println("Before after sorting the names :" +
+		// roomMatesList);
+
+		Collections.sort(roomMatesList, new RommateComparatorById());
+
+		System.out.println("**********Sorting By Id ********");
+
+		for (Roommate rommate : roomMatesList) {
+
+			System.out.println(rommate);
+
+		}
+
+		// System.out.println("Before after sorting the Id's :" +
+		// roomMatesList);
+
+		printRummetInformation(roomMatesList);
 
 	}
 
@@ -46,7 +69,7 @@ public class RoommateTest2 {
 		return roomMates;
 	}
 
-	public static void printRummetInfo(List<Roommate> roomMatesList) {
+	public static void printRummetInformation(List<Roommate> roomMatesList) {
 
 		for (Roommate rommate : roomMatesList) {
 
