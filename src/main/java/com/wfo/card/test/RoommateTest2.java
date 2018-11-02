@@ -21,6 +21,9 @@ public class RoommateTest2 {
 
 		Collections.sort(roomMatesList, new RoommateComparatorByName());
 
+		roomMatesList.size();
+		roomMatesList.contains("krishna");
+
 		for (Roommate rommate : roomMatesList) {
 
 			System.out.println(rommate);
